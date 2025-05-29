@@ -2,6 +2,8 @@ import asyncio
 from openai import AsyncOpenAI
 from agents import Agent, OpenAIChatCompletionsModel, Runner, set_tracing_disabled
 import os
+from dotenv import load_dotenv
+load_dotenv()
 
 OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
 BASE_URL = os.getenv("BASE_URL")
@@ -34,3 +36,4 @@ async def main():
 if __name__ == "__main__":
     asyncio.run(main())
  
+     
